@@ -16,7 +16,7 @@ body {
 }
 
 .bullets {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.884);
     border-radius: 10px;
     display: flex;
     position: absolute;
@@ -28,4 +28,8 @@ body {
 
 .fas.fa-circle {
     padding: 10px 5px;
+}
+
+.fas.fa-circle.active {
+    color: blue;
 }
