@@ -22,7 +22,7 @@
             <i class="fas fa-chevron-right" @click="imgDopo"></i>
         </div>
         <div class="bullets">
-            <i class="fas fa-circle" v-for="(img, index) in images" :class="currentImg == index ? 'active' : '' "></i>
+            <i class="fas fa-circle" v-for="(img, index) in images" :class="currentImg == index ? 'active' : '' " @click="cambiaCurrent(index)"></i>
         </div>
     </div>
     

@@ -26,6 +26,10 @@ const app = new Vue({
                 this.currentImg = 0;
             }
         },
+        cambiaCurrent: function(index) {
+            this.currentImg = index;
+            return index;
+        }
 
     }
 });
