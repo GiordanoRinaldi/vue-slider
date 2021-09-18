@@ -13,23 +13,25 @@ const app = new Vue({
 
         
     },
-    methods : {
+    methods: {
         imgPrima: function() {
             this.currentImg--;
             if (this.currentImg == -1 ) {
                 this.currentImg = this.images.length - 1;
-            }
+            };
         },
         imgDopo: function() {
             this.currentImg++;
             if (this.currentImg >= this.images.length ) {
                 this.currentImg = 0;
-            }
+            };
         },
         cambiaCurrent: function(index) {
             this.currentImg = index;
             return index;
-        }
-
+        },
+    },
+    mounted() {
+        setInterval(this.imgDopo, 3000);
     }
 });
