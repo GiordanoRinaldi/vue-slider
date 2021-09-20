@@ -11,6 +11,8 @@ const app = new Vue({
 
         currentImg: 0,
 
+        autoplayID: null,
+
         
     },
     methods: {
@@ -29,9 +31,15 @@ const app = new Vue({
         cambiaCurrent: function(index) {
             this.currentImg = index;
             return index;
+        }, 
+        stopAutoplay: function() {
+           clearInterval(this.autoplayID);
         },
+        startAutoplay: function() {
+            this.autoplayID = setInterval(this.imgDopo, 3000)
+        }
     },
-    mounted() {
-        setInterval(this.imgDopo, 3000);
-    }
+    mounted: function() {
+        this.startAutoplay();
+    },
 });

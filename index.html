@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="root">
-        <div class="previus">
-            <i class="fas fa-chevron-left" @click="imgPrima"></i>
-        </div>
-        <div class="photos" >
-            <img :src="images[currentImg]">
-        </div>
-        <div class="next">
-            <i class="fas fa-chevron-right" @click="imgDopo"></i>
-        </div>
-        <div class="bullets">
-            <i class="fas fa-circle" v-for="(img, index) in images" :class="currentImg == index ? 'active' : '' " @click="cambiaCurrent(index)"></i>
+    <div id="root" >
+        <div class="carousel" @mouseover="stopAutoplay" @mouseleave="startAutoplay">
+            <div class="previus">
+                <i class="fas fa-chevron-left" @click="imgPrima"></i>
+            </div>
+            <div class="photos" >
+                <img :src="images[currentImg]">
+            </div>
+            <div class="next">
+                <i class="fas fa-chevron-right" @click="imgDopo"></i>
+            </div>
+            <div class="bullets">
+                <i class="fas fa-circle" v-for="(img, index) in images" :class="currentImg == index ? 'active' : '' " @click="cambiaCurrent(index)"></i>
+            </div>
         </div>
     </div>
     

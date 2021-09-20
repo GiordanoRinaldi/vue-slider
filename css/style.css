@@ -2,7 +2,7 @@ body {
     width: 100%;
 }
 
-#root {
+.carousel {
     position: relative;
     margin-top: 50px;
     display: flex;
