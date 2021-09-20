@@ -41,5 +41,15 @@ const app = new Vue({
     },
     mounted: function() {
         this.startAutoplay();
+
+        document.addEventListener("keydown", 
+            (event) => {
+                if (event.key == "ArrowRight") {
+                    this.imgDopo();
+                }else if (event.key == "ArrowRight") {
+                    this.imgPrima();
+                }
+            }
+        );
     },
 });
